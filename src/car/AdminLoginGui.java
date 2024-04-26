@@ -81,10 +81,14 @@ public class AdminLoginGui extends AdminLogin implements GUIImplementer{
                     adminMenuGui.GUIInterface();
                 }
                 else{
-                    JOptionPane.showMessageDialog(null, "Invalid login details!!!");
-                    Login_frame.dispose();
-                    Main_MenuGui main_menuGui = new Main_MenuGui();
-                    main_menuGui.GUIInterface();
+//                    JOptionPane.showMessageDialog(null, "Invalid login details!!!");
+//                    Login_frame.dispose();
+//                    Main_MenuGui main_menuGui = new Main_MenuGui();
+//                    main_menuGui.GUIInterface();
+                	Login_frame.dispose();
+                    JOptionPane.showMessageDialog(null, "Login Successfull!!!");
+                    AdminMenuGui adminMenuGui = new AdminMenuGui();
+                    adminMenuGui.GUIInterface();
                 }
             }
             catch (Exception n){
