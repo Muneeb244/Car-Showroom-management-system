@@ -13,7 +13,8 @@ public class AdminLogin{
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             Admin ad1 = (Admin)objectInputStream.readObject();
             Admin ad2 = (Admin)objectInputStream.readObject();
-
+            System.out.print(ad1.getUsername());
+            System.out.print(ad1.getPassword());
             if(ad1.getUsername().equals(username) && ad1.getPassword().equals(password)){
                 return true;
             }
