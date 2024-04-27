@@ -1,0 +1,28 @@
+The level of coupling in a software project refers to the degree of interdependence between modules or components. Lower coupling indicates a more modular and flexible design, while higher coupling suggests tight connections between modules, making the system more rigid and harder to maintain or change.
+
+In the provided project, the coupling level seems moderate, but it could be improved for better modularity and flexibility. Here's an assessment of the coupling level based on the observed interactions between classes:
+
+1. **Main_MenuGui, User_MenuGui, SignInGUI, SignUpGUI**:
+   - These classes are responsible for displaying the main menu, user menu, sign-in form, and sign-up form, respectively.
+   - They interact directly with each other to transition between different menu options.
+   - The coupling between these classes is moderate because they have knowledge of each other's existence and directly call each other's methods to switch between menus. However, this coupling is necessary for user navigation within the application.
+
+2. **CustomerRecord, ShowCar, ShowCarGUI, ShowBookedCarsGui**:
+   - These classes handle customer records, car display, and booked car display functionalities.
+   - The `ShowCar` and `ShowBookedCarsGui` classes extend `ShowCarGUI` and `CancelOrderGui`, respectively, suggesting an inheritance relationship.
+   - There is a dependency between `ShowCar` and `CustomerRecord` for retrieving customer information.
+   - The coupling level here is moderate as well. However, the inheritance relationship might introduce some tight coupling, especially if changes in the superclass (`ShowCarGUI`, `CancelOrderGui`) affect the subclasses.
+
+3. **GUIImplementer**:
+   - This interface is implemented by various GUI-related classes in the project.
+   - It serves as a common contract for GUI classes, allowing them to be treated uniformly.
+   - This introduces loose coupling between GUI classes and other parts of the system, promoting flexibility and interchangeability.
+
+4. **CustomerRecord, AdminLoginGui**:
+   - The `AdminLoginGui` class interacts with `CustomerRecord` for signing in users.
+   - This introduces a level of coupling between administrative functionality and customer record management.
+
+Overall, while the project demonstrates some level of coupling, it's not overly tightly coupled. However, to further improve modularity and flexibility:
+- Consider decoupling GUI classes from each other by using an event-driven architecture or a mediator pattern to reduce direct dependencies.
+- Ensure that inheritance relationships are used judiciously to avoid excessive coupling between superclass and subclass. Consider composition over inheritance where appropriate.
+- Encapsulate dependencies and use interfaces to define contracts between components, promoting loose coupling and easier maintenance.
