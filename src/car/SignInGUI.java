@@ -31,7 +31,7 @@ public class SignInGUI extends CustomerRecord implements GUIImplementer{
         signin = new JLabel("Sign In");
         l_firstname = new JLabel("Enter first name:");
         l_lastname = new JLabel("Enter last name:");
-        l_id = new JLabel("Enter login id:");
+        l_id = new JLabel("Enter login Cnic:");
 
         submit_button = new JButton("Sign In");
         clear_button = new JButton("Clear");
@@ -111,7 +111,7 @@ public class SignInGUI extends CustomerRecord implements GUIImplementer{
                 if(e.getSource() == submit_button){
                     String userf_name = nameValidation(t_firstname.getText());
                     String userl_name = nameValidation(t_lastname.getText());
-                    if(signIN(userf_name, userl_name, Integer.parseInt(t_id.getText()))){
+                    if(signIN(userf_name, userl_name, Long.parseLong(t_id.getText()))){
                         JOptionPane.showMessageDialog(null, "Invalid Login details!!!");
                     }
                     else{

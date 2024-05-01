@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.Scanner;
+import car.Car;
 
 public class ShowCarGUI extends CarShower implements GUIImplementer{
     protected JFrame showcar_frame;
@@ -69,10 +70,10 @@ public class ShowCarGUI extends CarShower implements GUIImplementer{
 
     protected void showCars(){
         File file = new File("cars.txt");
-//    	FileInputStream fileInputStream = new FileInputStream("cars.txt");
-//    	ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+    	
 //    	
         try{
+//        	Car = (Admin)objectInputStream.readObject();
             Scanner fes = new Scanner(file);
             while(fes.hasNextLine()){
                 info_area.append(fes.nextLine() + "\n---------------------------------------------------------------------------------------------------------------------------\n");
