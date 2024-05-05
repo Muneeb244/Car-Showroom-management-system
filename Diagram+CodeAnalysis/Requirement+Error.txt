@@ -9,9 +9,8 @@ ERRORS
 3. Fix the problem of login admin
 4. SIGN
 5. Fix what to write while booking car (Car id)
-6. Ask for password instead of id
+6. Ask for cnic instead of id
 7. Show id and username for booked car
-8. Fix show customer interface
 
 cohesion and coupeling
 
