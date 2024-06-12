@@ -1,0 +1,16 @@
+Requirements
+
+Feature
+2. while booking car select color (new feature)
+
+
+ERRORS
+1. Fix the allignment of the available cars options to make it more readable (Improve interface)
+3. Fix the problem of login admin
+4. SIGN
+5. Fix what to write while booking car (Car id)
+6. Ask for cnic instead of id
+7. Show id and username for booked car
+
+cohesion and coupeling
+

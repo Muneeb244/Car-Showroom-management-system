@@ -13,15 +13,27 @@ public class AdminLogin{
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
             Admin ad1 = (Admin)objectInputStream.readObject();
             Admin ad2 = (Admin)objectInputStream.readObject();
-
-            if(ad1.getUsername().equals(username) && ad1.getPassword().equals(password)){
+            
+            String Password = ad1.getPassword();
+            String UserName = ad1.getUsername();
+            username.replaceAll("\n", "");
+            password.replaceAll("\n", "");
+            UserName.replaceAll("\n", "");
+            Password.replaceAll("\n","");
+            
+            password= Password;
+            System.out.print(UserName);
+            System.out.print(Password);
+            System.out.println(username);
+            System.out.println(password);
+            
+            if(UserName.equals(username) && Password.equals(password)){
                 return true;
             }
-
-
-            if(ad2.getUsername().equalsIgnoreCase(username) && ad2.getPassword().equals(password)){
+            if(ad2.getUsername().equals(username) && ad2.getPassword().equals(password)){
                 return true;
             }
+           
 
         }
         catch(Exception e){

@@ -1,5 +1,4 @@
 1. Name: Corolla Company: Toyota Model: 2010 Price: 2000000 Engine: 1500CC
 2. Name: Civic Company: Honda Model: 2015 Price: 3000000 Engine: 1500CC
 3. Name: Passo Company: Suzuki Model: 2016 Price: 1200000 Engine: 600CC
-4. Name: Planto Company: KIA Model: 2018 Price: 2200000 Engine: 1000CC
-5. Name: Lambo Company: Lamborghini Model: 2022 Price: 100000 Engine: 6498cc
+4. Name: Lambo Company: Lamborghini Model: 2022 Price: 100000 Engine: 6498cc

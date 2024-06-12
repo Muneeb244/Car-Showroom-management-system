@@ -51,14 +51,16 @@ public class CustomerRecord {
         }
     }
 
-    protected boolean signIN(String fname, String lname, int id){
+    protected boolean signIN(String fname, String lname, Long cnic){
         boolean b = false;
         String check = fname + "_" + lname;
         try{
             Scanner fes = new Scanner(f);
             while(fes.hasNextLine()){
                 str = fes.nextLine().split(" ");
-                if(Integer.parseInt(str[1]) == id && check.equalsIgnoreCase(str[3])){
+                //System.out.println(Long.parseLong(str[11])); 
+                if(Long.parseLong(str[11]) == cnic && check.equalsIgnoreCase(str[3])){
+                	//out.println(str[3]+ check);
                     b = false;
                     break;
                 }

@@ -85,6 +85,10 @@ public class AdminLoginGui extends AdminLogin implements GUIImplementer{
                     Login_frame.dispose();
                     Main_MenuGui main_menuGui = new Main_MenuGui();
                     main_menuGui.GUIInterface();
+//                	Login_frame.dispose();
+//                    JOptionPane.showMessageDialog(null, "Login Successfull!!!");
+//                    AdminMenuGui adminMenuGui = new AdminMenuGui();
+//                    adminMenuGui.GUIInterface();
                 }
             }
             catch (Exception n){
